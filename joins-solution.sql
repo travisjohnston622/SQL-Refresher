@@ -18,7 +18,10 @@ WHERE "warehouse_product"."product_id" = 5;
 
 
 --4. Which warehouses have diet pepsi?
-
+SELECT *
+FROM "warehouse"
+    JOIN "warehouse_product" ON "warehouse"."id" = "warehouse_product"."warehouse_id"
+WHERE "warehouse_product"."product_id" = 6;
 
 
 --5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
