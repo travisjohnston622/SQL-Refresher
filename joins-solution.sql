@@ -38,7 +38,9 @@ GROUP BY "customers"."id";
 
 
 --7. How many products do we carry?
-
+SELECT "products"."id", count(*)
+FROM "products"
+GROUP BY "products"."id";
 
 
 --8. What is the total available on-hand quantity of diet pepsi?
