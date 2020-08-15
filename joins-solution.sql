@@ -25,7 +25,10 @@ WHERE "warehouse_product"."product_id" = 6;
 
 
 --5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
-
+SELECT "orders"."id", count(*)
+FROM "orders"
+    JOIN "customers" ON "orders"."address_id" = "customers"."id"
+GROUP BY "orders"."id";
 
 
 --6. How many customers do we have?
