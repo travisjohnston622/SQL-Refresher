@@ -32,7 +32,9 @@ GROUP BY "orders"."id";
 
 
 --6. How many customers do we have?
-
+SELECT "customers"."id", count(*)
+FROM "customers"
+GROUP BY "customers"."id";
 
 
 --7. How many products do we carry?
